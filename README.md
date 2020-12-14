@@ -1,7 +1,7 @@
 # :zap: Node.js App Testing
 
 * Code to practise testing of Node.js apps
-* This is part of a [Udemy NodeJS - The Complete Guide (incl. MVC, REST APIs, GraphQL)](https://www.udemy.com/nodejs-the-complete-guide/)
+* This is Section 30 of a [Udemy NodeJS - The Complete Guide (incl. MVC, REST APIs, GraphQL)](https://www.udemy.com/nodejs-the-complete-guide/)
 
 **Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -21,7 +21,7 @@
 
 ## :books: General info
 
-* t
+* Uses Chai assertion library and Mocha test framework to test Node.js code
 
 ## :camera: Screenshots
 
@@ -33,28 +33,44 @@
 * [Express v4](https://www.npmjs.com/package/express) middleware for Node.js
 * [Mocha v8](https://mochajs.org/) JavaScript test framework running on Node.js and in the browser
 * [Chai v4](https://www.chaijs.com/) assertion library for Node.js and the browser
+* [Sinon v9](https://www.npmjs.com/package/sinon) standalone and test framework agnostic JavaScript test spies, stubs and mocks
 
 ## :floppy_disk: Setup
 
-* Assignment 2: type `nodemon app.js` then open browser at `localhost:5000`.
-* Assignment 3: type `nodemon app.js` then open browser at `localhost:3005`.
+* Run `npm i` to install dependencies
+* Add MongoDB `ATLAS_URI` to .env file
+* Run `npm run test` to run tests
 
 ## :computer: Code Examples
 
-tba
+* extract from `test/auth-middleware.js` showing a Mocha test with Chai assertion
+
+```javascript
+it('should throw an error if no auth header is present', function () {
+  const req = {
+    get: function (headerName) {
+      return null;
+    },
+  };
+    expect(authMiddleware.bind(this, req, {}, () => {})).to.throw(
+      'Not authenticated.'
+    );
+  });
+```
 
 ## :cool: Features
 
-* tba
+* Chai assertion tests are easy to understand
 
 ## :clipboard: App Status & To-do list
 
-* Status: Incomplete
+* Status: Complete
 * To-Do: complete
 
 ## :clap: Inspiration
 
 * [NodeJS - The Complete Guide (incl. MVC, REST APIs, GraphQL)](https://www.udemy.com/nodejs-the-complete-guide/)
+* [Chai Assertion Library Test Suite](https://www.chaijs.com/api/test/)
 
 ## :envelope: Contact
 
