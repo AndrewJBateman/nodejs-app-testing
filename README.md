@@ -25,7 +25,7 @@
 
 ## :camera: Screenshots
 
-![screenprint](./img/.png)
+No screenshots this time :-)
 
 ## :signal_strength: Technologies
 
@@ -64,8 +64,8 @@ it('should throw an error if no auth header is present', function () {
 
 ## :clipboard: App Status & To-do list
 
-* Status: Complete
-* To-Do: complete
+* Status: Work in progress
+* To-Do:  Try out new tests
 
 ## :clap: Inspiration
 
